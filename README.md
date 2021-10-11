@@ -11,7 +11,11 @@
 
 > pip install MySQL-python
 
+> pip install mysql-connector-python
+
 > pip install PyQt5
+
+> pip install QtPy
 
 > pip install pyqtgraph
 
