@@ -3,22 +3,22 @@
 
 ## proyecto de simulación 
 
-> Instalar python en su versión 3
+> Instalar python en su versión 3.x
 
-**Instalar las librerias correspondientes**
+### Instalar dependencias
+```bash
+   $ pip install numpy
 
-> pip install numpy
+   $ pip install MySQL-python
 
-> pip install MySQL-python
+   $ pip install mysql-connector-python
 
-> pip install mysql-connector-python
+   $ pip install PyQt5
 
-> pip install PyQt5
+   $ pip install QtPy
 
-> pip install QtPy
-
-> pip install pyqtgraph
-
+   $ pip install pyqtgraph
+```
 
 **Con estas librerias instaladas ya se puede ejecutar el simulador.**
 
