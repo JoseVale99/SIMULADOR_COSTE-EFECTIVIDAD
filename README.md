@@ -22,4 +22,5 @@
 
 **Con estas librerias instaladas ya se puede ejecutar el simulador.**
 
-
+# Documentación
+[Revista de Psiquiatría y Salud Mental](13141288_alt.pdf)
