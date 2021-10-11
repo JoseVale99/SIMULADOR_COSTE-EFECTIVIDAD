@@ -9,7 +9,7 @@ def connnection ():
     try:
         mydb = mysql.connector.connect(
         host= "localhost",
-        user= "root",
+        user= "admin",
         password= "123456789",
         database= "medicamentos_imss"
         )
