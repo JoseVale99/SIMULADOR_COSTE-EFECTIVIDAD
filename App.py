@@ -168,7 +168,7 @@ class App(QWidget):
     #Todo Event simulator
     def event_simulation(self):
         self.simulation_data()
-        prob_zipra=0.4
+        prob_zipra=4.4
         prob_aloper=0.06
         prob_clozapina=0.9
         prob_risper=0.007
