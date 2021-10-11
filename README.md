@@ -21,6 +21,9 @@
 ```
 
 **Con estas librerias instaladas ya se puede ejecutar el simulador.**
+### Capturas
+![plot](Plot.png)
+![my app pyqt5](app.png)
 
-# Documentación
+### Documentación
 [Revista de Psiquiatría y Salud Mental](13141288_alt.pdf)
