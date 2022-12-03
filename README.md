@@ -9,8 +9,6 @@
 ```bash
    $ pip install numpy
 
-   $ pip install MySQL-python
-
    $ pip install mysql-connector-python
 
    $ pip install PyQt5

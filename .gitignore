@@ -7,3 +7,6 @@ E61945A9A512ED5E1A3EE3F1A2365B88F8FE_E4E9EADA96734F01970E616FAB2FAC19
 __pycache__/App.cpython-38.pyc
 .vscode/settings.json
 __pycache__/App.cpython-38.pyc
+__pycache__/database.cpython-310.pyc
+__pycache__/App.cpython-310.pyc
+.gitignore
