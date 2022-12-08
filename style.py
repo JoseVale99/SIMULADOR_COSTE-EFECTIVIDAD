@@ -37,6 +37,20 @@ QLabel{
   font-size: 22px;
   text-align: center;
 }
+QLabel#text-principal{
+    background: transparent;
+  color: #FFF;
+  font-weight: bold;
+  font-family: Arial;
+  font-size: 22px;
+}
+QLabel#description{
+    background: transparent;
+  color: #FFF;
+  font-weight: normal;
+  font-family: Arial;
+  font-size: 12px;
+}
 QLabel#salida{
   background: transparent;
   color: #FFF;

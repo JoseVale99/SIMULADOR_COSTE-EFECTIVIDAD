@@ -31,8 +31,9 @@ class App(QWidget):
       
     def layoutUI(self):   
         # layout principal
-        self.principalLayout = QHBoxLayout(self)
+        self.principalLayout = QGridLayout(self)
         
+
         # primer Frame
         self.firstFrame = QFrame(self)
         self.firstFrame.setFrameShape(QFrame.StyledPanel)
@@ -44,6 +45,9 @@ class App(QWidget):
         
         
         # Layouts
+        
+        self.titleLayoutV = QHBoxLayout(self)
+        
         self.verticalLayout = QVBoxLayout(self.firstFrame)
         self.gridLayout = QGridLayout()
         
@@ -106,12 +110,31 @@ class App(QWidget):
             lbl.setText(name)
             self.gridLayout.addWidget(lbl, x, y)
             
+        
+        self.text_principal = QLabel("Simulador de coste - efectividad")
+        self.text_principal.setAlignment(QtCore.Qt.AlignCenter)
+        self.text_principal.setObjectName("text-principal")
+        
+
+        self.description = QLabel("La grafica muestra el costo efectividad de los medicamentos contra la esquizofrenia")
+        self.description.setAlignment(QtCore.Qt.AlignCenter)
+        self.description.setObjectName("description")
+
+        self.principalLayout.addLayout(self.titleLayoutV, 0, 0, 1, 4)
+        self.titleLayoutV.addWidget(self.text_principal)
         self.verticalLayout.addLayout(self.gridLayout)
-        self.principalLayout.addWidget(self.firstFrame)
+       
+        # self.principalLayout.addWidget(self.titleLayoutV)
+        self.principalLayout.addWidget(self.firstFrame, 1, 0)
+        
+        
+        
+        
+        
         
     
         #?   Parte de la Grafica 
-        self.graphWidget = PlotWidget()
+        self.graphWidget: PlotWidget = PlotWidget()
         self.graphWidget.showGrid(x = True, y = True)
         self.graphWidget.addLegend()
         
@@ -119,11 +142,13 @@ class App(QWidget):
         
         styles = {"color": "#fff", "font-size": "23px"}
         self.graphWidget.setLabel("left", " Pr (la intervención es óptima) ", **styles)
-        self.graphWidget.setLabel("bottom", "Financiamiento disponible para IMSS", **styles)        
+        self.graphWidget.setLabel("bottom", "Financiamiento disponible para IMSS", **styles) 
+               
         self.grafic_plot.addWidget(self.graphWidget)
         
         self.grafic_principal.addLayout(self.grafic_plot)
-        self.principalLayout.addWidget(self.second_Frame)
+        self.principalLayout.addWidget(self.second_Frame, 1, 1)
+        
         
         
         self.verticalLayout.addWidget(self.text_salida)
@@ -150,11 +175,12 @@ class App(QWidget):
         self.button_save.setObjectName("save")
         self.button_save.hide()
         self.button_save.clicked.connect(self.saveFig)
-        
+        self.grafic_plot.addWidget(self.description)
         self.grafic_plot.addWidget(self.button_save)
         
         self.layout_button.addWidget(self.start_simulation,0,1)
         self.verticalLayout.addLayout(self.layout_button)
+         
         
     #Todo cargar datos desde la bdd
     def simulation_data(self):
